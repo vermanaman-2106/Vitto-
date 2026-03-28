@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Problem from "../components/problem";
+import Problem from "../components/Problem";
 import Solution from "../components/Solution";
 import Modules from "../components/Modules";
 import Impact from "../components/Impact";
