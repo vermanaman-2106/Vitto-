@@ -18,7 +18,7 @@ export default function Hero() {
 
   const sendOtp = async () => {
     try {
-      const res = await fetch("http://localhost:5001/api/auth/send-otp", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ emailOrPhone }),
@@ -35,7 +35,7 @@ export default function Hero() {
 
   const verifyOtp = async () => {
     try {
-      const res = await fetch("http://localhost:5001/api/auth/verify-otp", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ emailOrPhone, otp }),
@@ -57,7 +57,7 @@ export default function Hero() {
 
   const submitLead = async () => {
     try {
-      const res = await fetch("http://localhost:5001/api/leads", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/leads`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
